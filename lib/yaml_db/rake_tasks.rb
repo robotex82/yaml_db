@@ -25,7 +25,7 @@ module YamlDb
     end
 
     def self.db_dump_data_file(extension = 'yml')
-      "#{dump_dir}/data.#{extension}"
+      ENV['file'] || "#{dump_dir}/data.#{extension}"
     end
 
     def self.dump_dir(dir = '')
